@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:finafinalproject/Home.dart';
 import 'package:finafinalproject/signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -173,6 +174,15 @@ class _LogInState extends State<LogIn> {
               ElevatedButton(
                   onPressed: uploadImageProcess,
                   child: Text("upload one file")),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return Home();
+                      },
+                    ));
+                  },
+                  child: Text("zzzz"))
             ],
           ),
         ),
